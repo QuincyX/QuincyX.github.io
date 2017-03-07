@@ -6,69 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://quincyx.github.io">
-  <title>ECS搭建nodejs+mongodb | Quincy blog</title>
+  <title>Tag: github | Quincy blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="系统版本centOS7.2
-
-更新系统软件
-
-yum -y update
-
-
-
-
-cd /usr/local/src
-wget https://nodejs.org/dist/v7.7.1/node-v7.7.1.tar.gz
-tar -xzvf node-v7.7.1.tar.gz
-cd node-v7.7.1
-
-
-此处插入安装gcc
-
-yum -y install gcc gcc-c++">
-<meta property="og:type" content="article">
-<meta property="og:title" content="ECS搭建nodejs+mongodb">
-<meta property="og:url" content="https://quincyx.github.io/2017/03/07/ECS搭建nodejs-mongodb/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Quincy blog">
+<meta property="og:url" content="https://quincyx.github.io/tags/github/index.html">
 <meta property="og:site_name" content="Quincy blog">
-<meta property="og:description" content="系统版本centOS7.2
-
-更新系统软件
-
-yum -y update
-
-
-
-
-cd /usr/local/src
-wget https://nodejs.org/dist/v7.7.1/node-v7.7.1.tar.gz
-tar -xzvf node-v7.7.1.tar.gz
-cd node-v7.7.1
-
-
-此处插入安装gcc
-
-yum -y install gcc gcc-c++">
-<meta property="og:updated_time" content="2017-03-07T13:28:40.294Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ECS搭建nodejs+mongodb">
-<meta name="twitter:description" content="系统版本centOS7.2
-
-更新系统软件
-
-yum -y update
-
-
-
-
-cd /usr/local/src
-wget https://nodejs.org/dist/v7.7.1/node-v7.7.1.tar.gz
-tar -xzvf node-v7.7.1.tar.gz
-cd node-v7.7.1
-
-
-此处插入安装gcc
-
-yum -y install gcc gcc-c++">
+<meta name="twitter:title" content="Quincy blog">
   
     <link rel="alternative" href="/atom.xml" title="Quincy blog" type="application/atom+xml">
   
@@ -204,228 +149,60 @@ yum -y install gcc gcc-c++">
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ECS搭建nodejs-mongodb" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      ECS搭建nodejs+mongodb
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/03/07/My-New-Post/" class="archive-article-date">
+  	<time datetime="2017-03-07T04:57:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/03/07/My-New-Post/">Hexo搭建记录</a>
     </h1>
   
 
-        
-        <a href="/2017/03/07/ECS搭建nodejs-mongodb/" class="archive-article-date">
-  	<time datetime="2017-03-07T06:42:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><p>系统版本<br>centOS7.2</p>
-</li>
-<li><p>更新系统软件</p>
-<blockquote>
-<p>yum -y update</p>
-</blockquote>
-</li>
-</ul>
-<blockquote>
-<p>cd /usr/local/src</p>
-<p>wget <a href="https://nodejs.org/dist/v7.7.1/node-v7.7.1.tar.gz" target="_blank" rel="external">https://nodejs.org/dist/v7.7.1/node-v7.7.1.tar.gz</a></p>
-<p>tar -xzvf node-v7.7.1.tar.gz</p>
-<p>cd node-v7.7.1</p>
-</blockquote>
-<ul>
-<li><p>此处插入安装gcc</p>
-<blockquote>
-<p>yum -y install gcc gcc-c++</p>
-</blockquote>
-</li>
-<li><p>执行配置脚本来进行编译预处理</p>
-<blockquote>
-<p>./configure</p>
-</blockquote>
-</li>
-<li><p>编译源代码</p>
-<blockquote>
-<p>make</p>
-</blockquote>
-</li>
-</ul>
-<blockquote>
-<p>make install</p>
-</blockquote>
-<ul>
-<li>安装 express 和 forever，这两个模块都推荐 global 安装<blockquote>
-<p>npm -g install express forever</p>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li>下面来安装mongodb<br>首先下载安装包</li>
-</ul>
-<blockquote>
-<p>cd /usr/local<br>wget <a href="https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.4.2.tgz" target="_blank" rel="external">https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.4.2.tgz</a><br>tar zxvf mongodb-linux-x86_64-3.4.2.tgz<br>mv mongodb-linux-x86_64-3.4.2 mongodb</p>
-</blockquote>
-<ul>
-<li>安装vim<blockquote>
-<p>yum install -y vim</p>
-</blockquote>
-</li>
-</ul>
-<blockquote>
-<p>vim /etc/rc.d/rc.local</p>
-</blockquote>
-<ul>
-<li>添加<blockquote>
-<p>/usr/local/mongodb/bin/mongod –dbpath=/var/mongodb/data &amp;</p>
-</blockquote>
-</li>
-</ul>
-<blockquote>
-<p>:wq<br>保存退出</p>
-</blockquote>
-<ul>
-<li><p>建立超级链接, 不然 sudo node 时会报 “command not found”</p>
-<blockquote>
-<p>sudo ln -s/usr/local/bin/node /usr/bin/node<br>sudo ln -s/usr/local/lib/node /usr/lib/node<br>sudo ln -s/usr/local/bin/npm /usr/bin/npm<br>sudo ln -s/usr/local/bin/node-waf /usr/bin/node-waf<br>sudo ln -s/usr/local/bin/forever /usr/bin/forever </p>
-</blockquote>
-</li>
-<li><p>检视运行中的应用: </p>
-<blockquote>
-<p>sudo forever list </p>
-</blockquote>
-</li>
-<li><p>关闭应用 </p>
-<blockquote>
-<p>sudo forever stop 0 </p>
-</blockquote>
-</li>
-</ul>
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-      
+          
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://quincyx.github.io/2017/03/07/ECS搭建nodejs-mongodb/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/03/07/markdown/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          markdown
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/03/07/My-New-Post/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo搭建记录</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-
-
-
-
-  
-    <div class="duoshuo"></div>
+    </div></section>
   
 
-
+    
 
 
           </div>
@@ -448,9 +225,9 @@ yum -y install gcc gcc-c++">
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
