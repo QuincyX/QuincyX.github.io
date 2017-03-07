@@ -634,7 +634,7 @@
 <p>jsonContent:<br>&nbsp;&nbsp;meta: false<br>&nbsp;&nbsp;pages: false<br>&nbsp;&nbsp;posts:<br>&nbsp;&nbsp;&nbsp;&nbsp;title: true<br>&nbsp;&nbsp;&nbsp;&nbsp;date: true<br>&nbsp;&nbsp;&nbsp;&nbsp;path: true<br>&nbsp;&nbsp;&nbsp;&nbsp;text: true<br>&nbsp;&nbsp;&nbsp;&nbsp;raw: false<br>&nbsp;&nbsp;&nbsp;&nbsp;content: false<br>&nbsp;&nbsp;&nbsp;&nbsp;slug: false<br>&nbsp;&nbsp;&nbsp;&nbsp;updated: false<br>&nbsp;&nbsp;&nbsp;&nbsp;comments: false<br>&nbsp;&nbsp;&nbsp;&nbsp;link: false<br>&nbsp;&nbsp;&nbsp;&nbsp;permalink: false<br>&nbsp;&nbsp;&nbsp;&nbsp;excerpt: false<br>&nbsp;&nbsp;&nbsp;&nbsp;categories: false<br>&nbsp;&nbsp;&nbsp;&nbsp;tags: true  </p>
 </blockquote>
 <p>可以修复主题中侧边栏显示问题</p>
-<h2 id="写、发"><a href="#写、发" class="headerlink" title="写、发"></a>写、发</h2><p>此处还得加再一个部署插件</p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>此处还得加再一个部署插件</p>
 <blockquote>
 <p>npm install hexo-deployer-git –save</p>
 </blockquote>
@@ -650,7 +650,12 @@
 <blockquote>
 <p>hexo deploy</p>
 </blockquote>
-<p>想想以后发个博客的完整流程要点击资源管理器，找到D盘，打开dev目录，再翻两层找到github.io目录，然后运行power shell，新建个空文章，然后在source/_posts目录下再打开md文件用VS code编辑好，才能运行<code>hexo generate</code>和<code>hexo deploy</code>发布出去，还真是有点小激动呢。<br>你问我为啥没有用<code>hexo server</code>本地预览一下？<br>我答：你可真闲，想再debug一遍我也不介意。</p>
+<p>为了方便使用，在hexo目录下放一个脚本</p>
+<blockquote>
+<p>hexo generate<br>hexo deploy   </p>
+</blockquote>
+<p>保存为<code>一键发布.ps1</code><br>以后直接右键用powershell运行就可以生成、发布了</p>
+<p>想想以后发个博客的完整流程要点击资源管理器，找到D盘，打开dev目录，再翻两层找到github.io目录，然后运行power shell，新建个空文章，然后在source/_posts目录下再打开md文件用VS code编辑好，才能运行<code>hexo generate</code>和<code>hexo deploy</code>发布出去，还真是有点小激动呢。<br>你问我为啥没有用<code>hexo server</code>本地预览一下？<br>我答：你可真闲，要是每发一篇文章想再debug一遍我也不介意。</p>
 
       
 
