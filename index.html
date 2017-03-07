@@ -172,15 +172,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>win10下powershell用起来还是很得劲的</p>
-<h2 id="把cmd替换为PowerShell的方式打开"><a href="#把cmd替换为PowerShell的方式打开" class="headerlink" title="把cmd替换为PowerShell的方式打开"></a>把cmd替换为PowerShell的方式打开</h2><ol>
-<li><p>Ctrl + R 输入regedit进入注册表</p>
-</li>
-<li><p>找到[HKEY_CLASSES_ROOT/Directory/Background/shell/cmd/command]</p>
-</li>
-<li><p>修改数据为C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoExit cd “%V”</p>
-</li>
-</ol>
-
+<h2 id="把cmd替换为PowerShell的方式打开"><a href="#把cmd替换为PowerShell的方式打开" class="headerlink" title="把cmd替换为PowerShell的方式打开"></a>把cmd替换为PowerShell的方式打开</h2>
+        
+          <a class="article-more-a" href="/2017/03/07/powershell/#more">more >></a>
+        
       
 
       
@@ -234,121 +229,10 @@
 <p><code># 一级标题</code></p>
 <h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><p><code>## 二级标题</code></p>
 <h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><p><code>### 三级标题</code></p>
-<h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><p><code>#### 四级标题</code></p>
-<h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><p><code>##### 五级标题</code></p>
-<h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p><code>###### 六级标题</code></p>
 </blockquote>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
-<li>无序列表</li>
-<li>无序列表<blockquote>
-<p><code>- 无序列表</code></p>
-</blockquote>
-</li>
-</ul>
-<hr>
-<ul>
-<li>无序列表</li>
-<li>无序列表<blockquote>
-<p><code>* 无序列表</code></p>
-</blockquote>
-</li>
-</ul>
-<hr>
-<ol>
-<li>有序列表</li>
-<li>有序列表</li>
-<li>有序列表<blockquote>
-<p><code>1. 有序列表</code></p>
-</blockquote>
-</li>
-</ol>
-<blockquote>
-<p><code>2. 有序列表</code></p>
-<p><code>3. 有序列表</code></p>
-</blockquote>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote>
-<p>引用的内容</p>
-<p><code>&gt; 引用的内容</code></p>
-</blockquote>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="https://www.baidu.com/img/bd_logo1.png" alt="baidulogo"></p>
-<blockquote>
-<p><code>![]()</code></p>
-<p><code>![baidulogo](https://www.baidu.com/img/bd_logo1.png)</code></p>
-</blockquote>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="https://github.com/" target="_blank" rel="external">github</a></p>
-<blockquote>
-<p><code>[]()</code></p>
-<p><code>[github](https://github.com/)</code></p>
-</blockquote>
-<h2 id="粗体与斜体"><a href="#粗体与斜体" class="headerlink" title="粗体与斜体"></a>粗体与斜体</h2><p><strong>这里是粗体</strong></p>
-<blockquote>
-<p><code>**这里是粗体**</code></p>
-</blockquote>
-<p><em>这里是斜体</em></p>
-<blockquote>
-<p><code>*这里是斜体*</code></p>
-</blockquote>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>此处略过</p>
-<h2 id="代码框"><a href="#代码框" class="headerlink" title="代码框"></a>代码框</h2><p><code>if(has_dream == true){day = days}</code></p>
-<blockquote>
-<p>&middot;<code>if(has_dream == true){day = days}</code>&middot;</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">代码段</div></pre></td></tr></table></figure>
-<blockquote>
-<p>&middot;&middot;&middot;<br>代码段<br>&middot;&middot;&middot;  </p>
-</blockquote>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><hr>
-<blockquote>
-<p><code>***</code></p>
-</blockquote>
-<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><table>
-<thead>
-<tr>
-<th>转义字符</th>
-<th style="text-align:center">显示字符</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>&amp;middot;</code></td>
-<td style="text-align:center">&middot;</td>
-</tr>
-<tr>
-<td><code>&amp;nbsp;</code></td>
-<td style="text-align:center">&nbsp;</td>
-</tr>
-<tr>
-<td><code>&amp;quot;</code></td>
-<td style="text-align:center">&quot;</td>
-</tr>
-<tr>
-<td><code>&amp;amp;</code></td>
-<td style="text-align:center">&amp;</td>
-</tr>
-<tr>
-<td><code>&amp;lt;</code></td>
-<td style="text-align:center">&lt;</td>
-</tr>
-<tr>
-<td><code>&amp;gt;</code></td>
-<td style="text-align:center">&gt;</td>
-</tr>
-<tr>
-<td><code>&amp;brvbar;</code></td>
-<td style="text-align:center">&brvbar;</td>
-</tr>
-<tr>
-<td><code>&amp;copy;</code></td>
-<td style="text-align:center">&copy;</td>
-</tr>
-<tr>
-<td><code>&amp;reg;</code></td>
-<td style="text-align:center">&reg;</td>
-</tr>
-</tbody>
-</table>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>行尾两个空格换行</p>
-
+        
+          <a class="article-more-a" href="/2017/03/07/markdown语法/#more">more >></a>
+        
       
 
       
@@ -404,107 +288,13 @@
 </blockquote>
 <h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><h3 id="下载node源码"><a href="#下载node源码" class="headerlink" title="下载node源码"></a>下载node源码</h3><blockquote>
 <p>cd /usr/local/src</p>
-<p>wget <a href="https://nodejs.org/dist/v7.7.1/node-v7.7.1.tar.gz" target="_blank" rel="external">https://nodejs.org/dist/v7.7.1/node-v7.7.1.tar.gz</a></p>
+<p>wget <a href="https://nodejs.org/dist/v7.7.1/node-v7.7.1.tar.gz">https://nodejs.org/dist/v7.7.1/node-v7.7.1.tar.gz</a></p>
 <p>tar -xzvf node-v7.7.1.tar.gz</p>
 <p>cd node-v7.7.1</p>
 </blockquote>
-<h3 id="此处插入安装gcc以完成编译"><a href="#此处插入安装gcc以完成编译" class="headerlink" title="此处插入安装gcc以完成编译"></a>此处插入安装gcc以完成编译</h3><blockquote>
-<p>yum -y install gcc gcc-c++</p>
-</blockquote>
-<h3 id="执行配置脚本来进行编译预处理"><a href="#执行配置脚本来进行编译预处理" class="headerlink" title="执行配置脚本来进行编译预处理"></a>执行配置脚本来进行编译预处理</h3><blockquote>
-<p>./configure</p>
-</blockquote>
-<h3 id="编译源代码"><a href="#编译源代码" class="headerlink" title="编译源代码"></a>编译源代码</h3><blockquote>
-<p>make<br>make install</p>
-</blockquote>
-<h2 id="安装-express-和-forever，这两个模块都推荐-global-安装"><a href="#安装-express-和-forever，这两个模块都推荐-global-安装" class="headerlink" title="安装 express 和 forever，这两个模块都推荐 global 安装"></a>安装 express 和 forever，这两个模块都推荐 global 安装</h2><blockquote>
-<p>npm -g install express forever</p>
-</blockquote>
-<h2 id="下面来安装mongodb"><a href="#下面来安装mongodb" class="headerlink" title="下面来安装mongodb"></a>下面来安装mongodb</h2><h3 id="首先下载安装包"><a href="#首先下载安装包" class="headerlink" title="首先下载安装包"></a>首先下载安装包</h3><blockquote>
-<p>cd /usr/local<br>wget <a href="https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.4.2.tgz" target="_blank" rel="external">https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.4.2.tgz</a><br>tar zxvf mongodb-linux-x86_64-3.4.2.tgz<br>mv mongodb-linux-x86_64-3.4.2 mongodb  </p>
-</blockquote>
-<h3 id="此处插入安装vim"><a href="#此处插入安装vim" class="headerlink" title="此处插入安装vim"></a>此处插入安装vim</h3><blockquote>
-<p>yum install -y vim</p>
-</blockquote>
-<h3 id="把mongodb加入开机启动"><a href="#把mongodb加入开机启动" class="headerlink" title="把mongodb加入开机启动"></a>把mongodb加入开机启动</h3><blockquote>
-<p>vim /etc/rc.d/rc.local  </p>
-</blockquote>
-<p>添加以下字段  </p>
-<blockquote>
-<p>/usr/local/mongodb/bin/mongod –dbpath=/var/mongodb/data &amp;</p>
-</blockquote>
-<p>保存退出</p>
-<blockquote>
-<p>:wq</p>
-</blockquote>
-<h2 id="建立超级链接-不然-sudo-node-时会报-“command-not-found”"><a href="#建立超级链接-不然-sudo-node-时会报-“command-not-found”" class="headerlink" title="建立超级链接, 不然 sudo node 时会报 “command not found”"></a>建立超级链接, 不然 sudo node 时会报 “command not found”</h2><blockquote>
-<p>sudo ln -s/usr/local/bin/node /usr/bin/node<br>sudo ln -s/usr/local/lib/node /usr/lib/node<br>sudo ln -s/usr/local/bin/npm /usr/bin/npm<br>sudo ln -s/usr/local/bin/node-waf /usr/bin/node-waf<br>sudo ln -s/usr/local/bin/forever /usr/bin/forever </p>
-</blockquote>
-<p>##forever用法</p>
-<h3 id="启动应用"><a href="#启动应用" class="headerlink" title="启动应用"></a>启动应用</h3><blockquote>
-<p>forever start server.js</p>
-</blockquote>
-<h3 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h3><blockquote>
-<p>forever stop app.js  </p>
-</blockquote>
-<h3 id="检视运行中的应用"><a href="#检视运行中的应用" class="headerlink" title="检视运行中的应用:"></a>检视运行中的应用:</h3><blockquote>
-<p>forever list </p>
-</blockquote>
-<h3 id="关闭应用"><a href="#关闭应用" class="headerlink" title="关闭应用"></a>关闭应用</h3><blockquote>
-<p>forever stop 0 </p>
-</blockquote>
-<h2 id="安装vue"><a href="#安装vue" class="headerlink" title="安装vue"></a>安装vue</h2><h3 id="安装Vue-Cli"><a href="#安装Vue-Cli" class="headerlink" title="安装Vue-Cli"></a>安装Vue-Cli</h3><blockquote>
-<p>npm i -g vue-cli</p>
-</blockquote>
-<h3 id="准备目录"><a href="#准备目录" class="headerlink" title="准备目录"></a>准备目录</h3><blockquote>
-<p>cd /home</p>
-</blockquote>
-<h3 id="初始化项目到vue文件夹"><a href="#初始化项目到vue文件夹" class="headerlink" title="初始化项目到vue文件夹"></a>初始化项目到vue文件夹</h3><blockquote>
-<p>vue init webpack vue</p>
-</blockquote>
-<h3 id="进入目录"><a href="#进入目录" class="headerlink" title="进入目录"></a>进入目录</h3><blockquote>
-<p>cd vue</p>
-</blockquote>
-<h3 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h3><blockquote>
-<p>npm install</p>
-</blockquote>
-<h3 id="运行dev服务器"><a href="#运行dev服务器" class="headerlink" title="运行dev服务器"></a>运行dev服务器</h3><blockquote>
-<p>npm run dev </p>
-</blockquote>
-<p>此时访问你的IP：8080应该能看到vue的demo页面了</p>
-<p>实际上你应该用 <code>forever start ./build/dev-server.js</code>来保证退出终端后服务仍可用</p>
-<h2 id="配置nginx代理"><a href="#配置nginx代理" class="headerlink" title="配置nginx代理"></a>配置nginx代理</h2><h3 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h3><blockquote>
-<p>npm install -y nginx</p>
-</blockquote>
-<h3 id="查找nginx配置文件"><a href="#查找nginx配置文件" class="headerlink" title="查找nginx配置文件"></a>查找nginx配置文件</h3><blockquote>
-<p>nginx -t</p>
-</blockquote>
-<p>此处不推荐再用vim在shell里改文件了，毕竟不好用<br>当然你要是觉得好用就当我没说</p>
-<p>用<a href="https://www.cloudbility.com/" target="_blank" rel="external">行云管家</a>连接ecs服务器<br>直接访问云主机的文件系统，找到<code>nginx.conf</code><br>添加以下信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">        listen 80;</div><div class="line">        server_name  你的网址.com;</div><div class="line"></div><div class="line">        location / &#123;</div><div class="line">            proxy_set_header   X-Real-IP $remote_addr;</div><div class="line">            proxy_set_header   Host      $http_host;</div><div class="line">            proxy_pass         http://127.0.0.1:8080;</div><div class="line">        &#125;   </div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
-<p>当然你也可以多添加几个域名，分配不同的root目录，或者转发node.js生成的不同端口，就可以部署多站点虚拟主机了。</p>
-<h2 id="配置pureftp"><a href="#配置pureftp" class="headerlink" title="配置pureftp"></a>配置pureftp</h2><p>没有ftp简直都不能叫能用的服务器<br>当然你要是git玩的溜就当我没说</p>
-<h3 id="安装pureftp"><a href="#安装pureftp" class="headerlink" title="安装pureftp"></a>安装pureftp</h3><blockquote>
-<p>yum install pure-ftpd -y</p>
-</blockquote>
-<h3 id="创建ftp的用户组"><a href="#创建ftp的用户组" class="headerlink" title="创建ftp的用户组"></a>创建ftp的用户组</h3><blockquote>
-<p>groupadd ftpgroup</p>
-</blockquote>
-<h3 id="创建ftp用户并指定-home目录"><a href="#创建ftp用户并指定-home目录" class="headerlink" title="创建ftp用户并指定/home目录"></a>创建ftp用户并指定/home目录</h3><blockquote>
-<p>useradd 你的ftp账户名 -u ftpgroup -d /home</p>
-</blockquote>
-<h3 id="修改ftp用户的密码"><a href="#修改ftp用户的密码" class="headerlink" title="修改ftp用户的密码"></a>修改ftp用户的密码</h3><blockquote>
-<p>passwd 你的ftp账户名</p>
-</blockquote>
-<h3 id="配置防火墙策略"><a href="#配置防火墙策略" class="headerlink" title="配置防火墙策略"></a>配置防火墙策略</h3><blockquote>
-<p>iptables -A INPUT -p tcp –dport 21 -j ACCEPT<br>iptables -A INPUT -p tcp –dport 48000:50000 -j ACCEPT   </p>
-</blockquote>
-<h3 id="修改目录权限"><a href="#修改目录权限" class="headerlink" title="修改目录权限"></a>修改目录权限</h3><blockquote>
-<p>chown 你的ftp账户名.ftpgroup /home/ -R</p>
-</blockquote>
-<h3 id="启动ftp服务"><a href="#启动ftp服务" class="headerlink" title="启动ftp服务"></a>启动ftp服务</h3><blockquote>
-<p>service pure-ftpd start</p>
-</blockquote>
-
+        
+          <a class="article-more-a" href="/2017/03/07/ECS搭建/#more">more >></a>
+        
       
 
       
@@ -569,94 +359,13 @@
 <p>但是毕竟有github的逼格加持</p>
 <p>那就弄一个罢</p>
 <h3 id="本机环境"><a href="#本机环境" class="headerlink" title="本机环境"></a>本机环境</h3><ul>
-<li><a href="http://www.iplaysoft.com/windows10.html" target="_blank" rel="external">win10 RS1</a></li>
-<li><a href="https://nodejs.org/dist/v7.7.1/node-v7.7.1-x64.msi" target="_blank" rel="external">node.js V7.7.1</a></li>
-<li><a href="https://git-scm.com/download/win" target="_blank" rel="external">git V2.12.0</a></li>
+<li><a href="http://www.iplaysoft.com/windows10.html">win10 RS1</a></li>
+<li><a href="https://nodejs.org/dist/v7.7.1/node-v7.7.1-x64.msi">node.js V7.7.1</a></li>
+<li><a href="https://git-scm.com/download/win">git V2.12.0</a></li>
 </ul>
-<h2 id="首先是github"><a href="#首先是github" class="headerlink" title="首先是github"></a>首先是github</h2><p>在你的github账号下新建一个repository</p>
-<p>Repository name 就填上<code>你的账户名.github.io</code></p>
-<p>然后进入repository，直接找到最后一个Setting标签</p>
-<p>在GitHub Pages这一栏</p>
-<p>source里选择你要发布的branch，默认master，点击save</p>
-<p>没啥问题的话，这里会有个绿色横幅</p>
-<blockquote>
-<p>Your site is published at <a href="https://你的名字.github.io/" target="_blank" rel="external">https://你的名字.github.io/</a></p>
-</blockquote>
-<h2 id="然后是hexo"><a href="#然后是hexo" class="headerlink" title="然后是hexo"></a>然后是hexo</h2><p>按照<a href="https://hexo.io/" target="_blank" rel="external">hexo官网</a>的指示</p>
-<p>全局安装hexo-cli</p>
-<blockquote>
-<p>npm install hexo-cli -g</p>
-</blockquote>
-<p>把hexo安装到blog目录</p>
-<blockquote>
-<p>hexo init blog</p>
-</blockquote>
-<p>进入hexo目录</p>
-<blockquote>
-<p>cd blog</p>
-</blockquote>
-<p>安装依赖</p>
-<blockquote>
-<p>npm install</p>
-</blockquote>
-<p>启动本地hexo服务器</p>
-<blockquote>
-<p>hexo server</p>
-</blockquote>
-<p>shell显示以下信息</p>
-<blockquote>
-<p>INFO  Start processing<br>INFO  Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. press Ctrl+C to stop.</p>
-</blockquote>
-<p>安装完成，打开<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>就可以看到blog页面了</p>
-<p>好了可以关掉server了</p>
-<h2 id="外观也很重要"><a href="#外观也很重要" class="headerlink" title="外观也很重要"></a>外观也很重要</h2><p>先别急着写blog，先来安装个主题样式</p>
-<p>比如这个<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">yilia</a>，这是<a href="http://litten.me/" target="_blank" rel="external">demo</a></p>
-<p>git到本地或者用<a href="https://github-windows.s3.amazonaws.com/GitHubSetup.exe" target="_blank" rel="external">github desktop</a> Clone到本地</p>
-<p>把源码放到Hexo的<code>/themes/yilia</code>目录下</p>
-<p>修改主题目录里的<code>_config.yml</code>文件</p>
-<blockquote>
-<p>#你的头像url<br>avatar:</p>
-</blockquote>
-<p>此处填上头像地址，要不然不好看是吧</p>
-<p>其他的就按需修改吧</p>
-<p>然后回到Hexo根目录，修改<code>_config.yml</code>文件</p>
-<blockquote>
-<p>theme: yilia</p>
-</blockquote>
-<p>主题改为yilia就好了</p>
-<p>再找到最后的deploy设置项</p>
-<blockquote>
-<p>deploy:<br>&nbsp;&nbsp;type: git<br>&nbsp;&nbsp;repo: <a href="https://github.com/你的名字/你的名字.github.io.git" target="_blank" rel="external">https://github.com/你的名字/你的名字.github.io.git</a><br>&nbsp;&nbsp;branch: master  </p>
-</blockquote>
-<p>repo修改成你的仓库地址</p>
-<p>然后在末尾加上</p>
-<blockquote>
-<p>jsonContent:<br>&nbsp;&nbsp;meta: false<br>&nbsp;&nbsp;pages: false<br>&nbsp;&nbsp;posts:<br>&nbsp;&nbsp;&nbsp;&nbsp;title: true<br>&nbsp;&nbsp;&nbsp;&nbsp;date: true<br>&nbsp;&nbsp;&nbsp;&nbsp;path: true<br>&nbsp;&nbsp;&nbsp;&nbsp;text: true<br>&nbsp;&nbsp;&nbsp;&nbsp;raw: false<br>&nbsp;&nbsp;&nbsp;&nbsp;content: false<br>&nbsp;&nbsp;&nbsp;&nbsp;slug: false<br>&nbsp;&nbsp;&nbsp;&nbsp;updated: false<br>&nbsp;&nbsp;&nbsp;&nbsp;comments: false<br>&nbsp;&nbsp;&nbsp;&nbsp;link: false<br>&nbsp;&nbsp;&nbsp;&nbsp;permalink: false<br>&nbsp;&nbsp;&nbsp;&nbsp;excerpt: false<br>&nbsp;&nbsp;&nbsp;&nbsp;categories: false<br>&nbsp;&nbsp;&nbsp;&nbsp;tags: true  </p>
-</blockquote>
-<p>可以修复主题中侧边栏显示问题</p>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>此处还得加再一个部署插件</p>
-<blockquote>
-<p>npm install hexo-deployer-git –save</p>
-</blockquote>
-<p>新建文章</p>
-<blockquote>
-<p>hexo new “新文章” </p>
-</blockquote>
-<p>生成静态页面</p>
-<blockquote>
-<p>hexo generate</p>
-</blockquote>
-<p>部署到github</p>
-<blockquote>
-<p>hexo deploy</p>
-</blockquote>
-<p>为了方便使用，在hexo目录下放一个脚本</p>
-<blockquote>
-<p>hexo generate<br>hexo deploy   </p>
-</blockquote>
-<p>保存为<code>一键发布.ps1</code><br>以后直接右键用powershell运行就可以生成、发布了</p>
-<p>想想以后发个博客的完整流程要点击资源管理器，找到D盘，打开dev目录，再翻两层找到github.io目录，然后运行power shell，新建个空文章，然后在source/_posts目录下再打开md文件用VS code编辑好，才能运行<code>hexo generate</code>和<code>hexo deploy</code>发布出去，还真是有点小激动呢。<br>你问我为啥没有用<code>hexo server</code>本地预览一下？<br>我答：你可真闲，要是每发一篇文章想再debug一遍我也不介意。</p>
-
+        
+          <a class="article-more-a" href="/2017/03/07/hexo搭建/#more">more >></a>
+        
       
 
       
@@ -717,16 +426,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+        <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+        
+          <a class="article-more-a" href="/2017/03/07/hello-world/#more">more >></a>
+        
       
 
       
