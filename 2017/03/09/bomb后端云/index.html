@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://quincyx.github.io">
-  <title>Archives: 2017 | Quincy blog</title>
+  <title>bomb后端云 | Quincy blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Quincy blog">
-<meta property="og:url" content="https://quincyx.github.io/archives/2017/index.html">
+  <meta name="description" content="完全0后端基础的菜鸟要测试与后端通信保存数据和读取数据">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bomb后端云">
+<meta property="og:url" content="https://quincyx.github.io/2017/03/09/bomb后端云/index.html">
 <meta property="og:site_name" content="Quincy blog">
+<meta property="og:description" content="完全0后端基础的菜鸟要测试与后端通信保存数据和读取数据">
+<meta property="og:updated_time" content="2017-03-09T16:08:58.997Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Quincy blog">
+<meta name="twitter:title" content="bomb后端云">
+<meta name="twitter:description" content="完全0后端基础的菜鸟要测试与后端通信保存数据和读取数据">
   
     <link rel="alternative" href="/atom.xml" title="Quincy blog" type="application/atom+xml">
   
@@ -173,36 +177,78 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-bomb后端云" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      bomb后端云
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/09/bomb后端云/" class="archive-article-date">
+
+        
+        <a href="/2017/03/09/bomb后端云/" class="archive-article-date">
   	<time datetime="2017-03-09T15:55:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-09</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/09/bomb后端云/">bomb后端云</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>完全0后端基础的菜鸟要测试与后端通信保存数据和读取数据</p>
+<a id="more"></a>
+<p>本来计划的是用mongodb，但是花了一个小时也没有自己写出来保存数据和读取数据的代码</p>
+<p>看来还得先啃了文档才行</p>
+<p>但是今天不能光睡觉了，项目得有点进展呐</p>
+<p>找到了bomb后端云</p>
+<p>根据官方文档，下载SDK，照着demo很快就写出来能用的代码了</p>
+<p>此处有个小坑，bomb SDK的js文件不知道怎么引入webpack里</p>
+<p>所以绕了个弯路，把<code>bomb.min.js</code>放到了阿里oss里，然后再引入到<code>index.html</code></p>
+<p>以下是最简单的保存数据和读取数据的demo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  &lt;div id=&quot;userdemo&quot;&gt;</div><div class="line">  </div><div class="line">    &lt;img :src=&quot;myurl&quot;&gt;&lt;br&gt;&lt;br&gt;</div><div class="line">    &lt;p&gt;此处不关百度的事&lt;/p&gt;</div><div class="line">    &lt;input</div><div class="line">      v-model=&quot;newText&quot;</div><div class="line">      v-on:keyup.enter=&quot;addNew&quot;</div><div class="line">      placeholder=&quot;添加一项&quot;</div><div class="line">    &gt;</div><div class="line">    &lt;button v-on:click=&quot;addNew&quot;&gt;提交&lt;/button&gt;</div><div class="line"></div><div class="line">    &lt;ul&gt;</div><div class="line">      &lt;li v-for=&quot;(item, index) in list&quot; &gt;&#123;&#123; index+1 &#125;&#125; . &#123;&#123; item &#125;&#125;&lt;/li&gt;</div><div class="line">    &lt;/ul&gt;</div><div class="line"></div><div class="line">    &lt;router-link to=&quot;/&quot; id=&quot;demonav&quot; &gt;</div><div class="line">      回到主页</div><div class="line">    &lt;/router-link&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">export default &#123;</div><div class="line">  name: &apos;userdemo&apos;,</div><div class="line">  data() &#123;</div><div class="line">    return &#123;</div><div class="line">       myurl:&quot;https://www.baidu.com/img/baidu_jgylogo3.gif&quot;,</div><div class="line">       list: [</div><div class="line">         &apos;吃好饭&apos;,&apos;多喝水&apos;,&apos;stay simple&apos;</div><div class="line">       ]</div><div class="line">    &#125;</div><div class="line">   </div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  created:function()&#123;</div><div class="line">    var Listdb = Bmob.Object.extend(&quot;list&quot;);</div><div class="line">    var query = new Bmob.Query(Listdb);</div><div class="line">    var thislist = this.list;</div><div class="line">    query.find(&#123;</div><div class="line">        success: function(results) &#123;</div><div class="line">          for (var i = 0; i &lt; results.length; i++) &#123;</div><div class="line">            var object = results[i];</div><div class="line">            var alllist = object.get(&apos;list_item&apos;);</div><div class="line">            thislist.push(alllist);</div><div class="line">          &#125;</div><div class="line">        &#125;,</div><div class="line">        error: function(error) &#123;</div><div class="line">          alert(&quot;获取数据失败&quot; + error.code + &quot; &quot; + error.message);</div><div class="line">        &#125;</div><div class="line">      &#125;);</div><div class="line"></div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  methods:&#123;</div><div class="line">    addNew: function () &#123;</div><div class="line">      this.list.push(this.newText)</div><div class="line">      var Listdb = Bmob.Object.extend(&quot;list&quot;);</div><div class="line">      var listdb = new Listdb();</div><div class="line">      var aaa = this.newText;</div><div class="line">      listdb.set(&quot;list_item&quot;, aaa);</div><div class="line">      listdb.save(null);</div><div class="line">      this.newText= &quot;&quot;;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">  &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>轻喷，毕竟现在算是解决了前后端的数据交互问题。</p>
+<p>剩下的心里就有底了</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板，祝老板约炮成功！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://share-quincy.oss-cn-shanghai.aliyuncs.com/image/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://share-quincy.oss-cn-shanghai.aliyuncs.com/image/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -214,362 +260,88 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://quincyx.github.io/2017/03/09/bomb后端云/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/09/hexo-新文章模板/" class="archive-article-date">
-  	<time datetime="2017-03-08T16:12:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-09</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/09/hexo-新文章模板/">hexo 新文章模板</a>
-    </h1>
+  
+    <a href="/2017/03/09/hexo-新文章模板/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo 新文章模板</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/08/centos-mongodb/" class="archive-article-date">
-  	<time datetime="2017-03-08T15:55:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/08/centos-mongodb/">linux下mongodb启动参数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">build 21daysapp in 21days</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mongodb</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/08/mongodb注册服务/" class="archive-article-date">
-  	<time datetime="2017-03-08T15:42:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/08/mongodb注册服务/">mongodb注册服务</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">build 21daysapp in 21days</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mongodb</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/08/webpack引入jquery/" class="archive-article-date">
-  	<time datetime="2017-03-08T06:14:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/08/webpack引入jquery/">vue-cli webpack 引入jquery</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">build 21daysapp in 21days</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/07/powershell/" class="archive-article-date">
-  	<time datetime="2017-03-07T13:34:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/07/powershell/">Shift+右键&quot;在此处打开命令窗口&quot;替换为PowerShell</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">powershell</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/07/markdown语法/" class="archive-article-date">
-  	<time datetime="2017-03-07T13:33:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/07/markdown语法/">markdown</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/07/ECS搭建/" class="archive-article-date">
-  	<time datetime="2017-03-07T06:42:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/07/ECS搭建/">ECS搭建nodejs+mongodb+vue+nginx+pureftp</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">build 21daysapp in 21days</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/07/hexo搭建/" class="archive-article-date">
-  	<time datetime="2017-03-07T04:57:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/07/hexo搭建/">Hexo搭建记录</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/07/hello-world/" class="archive-article-date">
-  	<time datetime="2017-03-07T04:45:01.120Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/07/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -592,8 +364,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
