@@ -6,14 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://quincyx.github.io">
-  <title>Tag: github | Quincy blog</title>
+  <title>从零开始Vue | Quincy blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Quincy blog">
-<meta property="og:url" content="https://quincyx.github.io/tags/github/index.html">
+  <meta name="description" content="只需要html、css、js基础从零开始使用Vue，包括node.js,webpack,vue-router,vuex
+乍看这些东西是很复杂，按照下边的步骤，不需要其他知识，也可以避过很多坑 
+简洁好用的Vue很值得你去尝试一下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始Vue">
+<meta property="og:url" content="https://quincyx.github.io/2017/03/28/Vue/index.html">
 <meta property="og:site_name" content="Quincy blog">
+<meta property="og:description" content="只需要html、css、js基础从零开始使用Vue，包括node.js,webpack,vue-router,vuex
+乍看这些东西是很复杂，按照下边的步骤，不需要其他知识，也可以避过很多坑 
+简洁好用的Vue很值得你去尝试一下">
+<meta property="og:updated_time" content="2017-03-28T14:44:36.602Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Quincy blog">
+<meta name="twitter:title" content="从零开始Vue">
+<meta name="twitter:description" content="只需要html、css、js基础从零开始使用Vue，包括node.js,webpack,vue-router,vuex
+乍看这些东西是很复杂，按照下边的步骤，不需要其他知识，也可以避过很多坑 
+简洁好用的Vue很值得你去尝试一下">
   
     <link rel="alternative" href="/atom.xml" title="Quincy blog" type="application/atom+xml">
   
@@ -173,64 +183,191 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Vue" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/07/hexo搭建/" class="archive-article-date">
-  	<time datetime="2017-03-07T04:57:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-07</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/07/hexo搭建/">Hexo搭建记录</a>
+    <h1 class="article-title" itemprop="name">
+      从零开始Vue
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/03/28/Vue/" class="archive-article-date">
+  	<time datetime="2017-03-28T08:20:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>只需要html、css、js基础<br>从零开始使用Vue，包括node.js,webpack,vue-router,vuex</p>
+<p>乍看这些东西是很复杂，按照下边的步骤，不需要其他知识，也可以避过很多坑 </p>
+<p>简洁好用的Vue很值得你去尝试一下   </p>
+<a id="more"></a>
+<h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1><h2 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1. 安装node.js"></a>1. 安装<a href="https://nodejs.org/" target="_blank" rel="external">node.js</a></h2><p>有<code>V6.10 LTS</code>版和<code>V7.74 Current</code>版可选，随意</p>
+<h2 id="2-安装淘宝NPM镜像"><a href="#2-安装淘宝NPM镜像" class="headerlink" title="2. 安装淘宝NPM镜像"></a>2. 安装<a href="https://npm.taobao.org/" target="_blank" rel="external">淘宝NPM镜像</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</div></pre></td></tr></table></figure>
+<p>然后就可以愉快的使用cnpm替代npm来加速连接了</p>
+<h2 id="3-安装Vue"><a href="#3-安装Vue" class="headerlink" title="3. 安装Vue"></a>3. 安装<a href="https://cn.vuejs.org/" target="_blank" rel="external">Vue</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm install vue</div></pre></td></tr></table></figure>
+<h2 id="4-安装Vue-cli"><a href="#4-安装Vue-cli" class="headerlink" title="4. 安装Vue-cli"></a>4. 安装Vue-cli</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm install --global vue-cli</div></pre></td></tr></table></figure>
+<p>然后准备一个目录，比如<code>d:\dev</code>，shift+右键<code>在此处打开命令窗口</code>，或者cd到这个目录  </p>
+<h2 id="5-创建我的项目（包含webpack和vue-router）"><a href="#5-创建我的项目（包含webpack和vue-router）" class="headerlink" title="5. 创建我的项目（包含webpack和vue-router）"></a>5. 创建我的项目（包含webpack和vue-router）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vue init webpack my-project</div></pre></td></tr></table></figure>
+<p>此处需要输入项目信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">?Project name  `my-project`  </div><div class="line">?Project description  `这是我的demo`  </div><div class="line">?Author  `这是我的名字`  </div><div class="line">?Runtime + Compiler  `enter`  </div><div class="line">?Install vue-router?  `Y`  `选择安装vue-router`   </div><div class="line">?Use ESLint to lint your code?  `N`  </div><div class="line">?Setup unit tests with Karma + Mocha?  `N`  </div><div class="line">?Setup e2e tests with Nightwatch?  `N`</div></pre></td></tr></table></figure></p>
+<p>然后进入项目目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd my-project</div></pre></td></tr></table></figure></p>
+<h2 id="6-安装依赖"><a href="#6-安装依赖" class="headerlink" title="6. 安装依赖"></a>6. 安装依赖</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm install</div></pre></td></tr></table></figure>
+<h2 id="7-运行开发环境"><a href="#7-运行开发环境" class="headerlink" title="7. 运行开发环境"></a>7. 运行开发环境</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm run dev</div></pre></td></tr></table></figure>
+<p>此时浏览器应该已经打开了一个vue页面<br><code>Welcome to Your Vue.js App</code></p>
+<p>花了这么长时间，我们还没有真正敲一行代码，hello world就已经自动出来了</p>
+<h1 id="然后该轮到我们来改变世界了"><a href="#然后该轮到我们来改变世界了" class="headerlink" title="然后该轮到我们来改变世界了"></a>然后该轮到我们来改变世界了</h1><p>不用关闭这个网页，把它放到旁边  </p>
+<h2 id="1-打开项目根目录下的-src-components-hello-vue"><a href="#1-打开项目根目录下的-src-components-hello-vue" class="headerlink" title="1. 打开项目根目录下的\src\components\hello.vue"></a>1. 打开项目根目录下的<code>\src\components\hello.vue</code></h2><p>可以看到，每个vue文件都是同时包含有html、javascript、css</p>
+<h2 id="2-现在我们把-lt-div-class-quot-hello-quot-gt-下边的内容都给删掉"><a href="#2-现在我们把-lt-div-class-quot-hello-quot-gt-下边的内容都给删掉" class="headerlink" title="2. 现在我们把&lt;div class=&quot;hello&quot;&gt;下边的内容都给删掉"></a>2. 现在我们把<code>&lt;div class=&quot;hello&quot;&gt;</code>下边的内容都给删掉</h2><p>此处注意，一定不能删掉外层的<code>&lt;div&gt;&lt;/div&gt;</code><br>每个<code>&lt;template&gt;&lt;/template&gt;</code>里必须且只能包含一个根节点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  &lt;div class=&quot;hello&quot;&gt;</div><div class="line">   </div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/template&gt;</div></pre></td></tr></table></figure></p>
+<p>比如像这样子</p>
+<h2 id="3-在编辑器中ctrl-s保存文件"><a href="#3-在编辑器中ctrl-s保存文件" class="headerlink" title="3. 在编辑器中ctrl+s保存文件"></a>3. 在编辑器中<code>ctrl+s</code>保存文件</h2><p>你会看到刚才打开的<code>localhost:8080</code>页面已经自动刷新了<br>这就是webpack的前端热重载技术，所有的代码修改实时更新</p>
+<h2 id="4-不如先在空白页面上写个计算器吧"><a href="#4-不如先在空白页面上写个计算器吧" class="headerlink" title="4. 不如先在空白页面上写个计算器吧"></a>4. 不如先在空白页面上写个计算器吧</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;p&gt;第一个数：&lt;input type=&quot;number&quot;&gt;&lt;/p&gt;</div><div class="line">&lt;p&gt;第二个数：&lt;input type=&quot;text&quot;&gt;&lt;/p&gt;</div><div class="line">&lt;p&gt;两者之和：&lt;/p&gt;</div></pre></td></tr></table></figure>
+<p>写上两个数字输入框和运算结果  </p>
+<h2 id="5-不用function也能计算"><a href="#5-不用function也能计算" class="headerlink" title="5. 不用function也能计算"></a>5. 不用function也能计算</h2><p>我们给两个input里分别加上绑定值 <code>v-model=&quot;a&quot;</code> 和 <code>v-model=&quot;b&quot;</code><br>运算结果处写上<code>{</code> <code>parseInt(a)+parseInt(b) ``}</code><br>这时候我们的全部HTML看起来应该是像下边这样：  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  &lt;div class=&quot;hello&quot;&gt;</div><div class="line">      &lt;p&gt;第一个数：&lt;input type=&quot;number&quot; v-model=&quot;a&quot;&gt;&lt;/p&gt;</div><div class="line">      &lt;p&gt;第二个数：&lt;input type=&quot;number&quot; v-model=&quot;b&quot;&gt;&lt;/p&gt;</div><div class="line">      &lt;p&gt;两者之和：&#123;&amp;#123; parseInt(a)+parseInt(b) &amp;#125;&#125;&lt;/p&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/template&gt;</div></pre></td></tr></table></figure>
+<p>注意此处，html标签内使用<code>v-model</code>，标签外使用   <figure class="highlight plain"><figcaption><span>&#125;&#125; ```  </span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">此时在网页计算器上输入两个数字应该能显示结果了，但是console里却有一堆报错  </div><div class="line">因为a和b还没有被正确声明</div><div class="line"></div><div class="line">## 6. Vue的属性</div><div class="line">在`&lt;script&gt;`标签里有一行还没删掉的`msg: &apos;Welcome to Your Vue.js App&apos;`  </div><div class="line">把它替换成`a:null,b:null`  </div><div class="line">完整样式如下</div></pre></td></tr></table></figure></p>
+<p><script><br>export default {<br>  name: ‘hello’,<br>  data () {<br>    return {<br>      a:null,b:null<br>    }<br>  }<br>}<br></script><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">在这里，可以理解为所有的属性和方法都是以数组形式保存的  </div><div class="line">所以，`a:null,b:null` 中间要有逗号，末尾不能有逗号</div><div class="line"></div><div class="line">*此处的vue中文文档有bug，`data:&#123;&#125;`格式应该是```data()&#123;return&#123;&#125;&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="7-再来个计算器的归零功能"><a href="#7-再来个计算器的归零功能" class="headerlink" title="7. 再来个计算器的归零功能"></a>7. 再来个计算器的归零功能</h2><p>在第三个p标签上加个点击事件<code>@click=&quot;a=0;b=0&quot;</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;p @click=&quot;a=0;b=0&quot;&gt;两者之和：&#123;&#123; parseInt(a)+parseInt(b) &#125;&#125;&lt;/p&gt;</div></pre></td></tr></table></figure>
+<p>保存试一下吧</p>
+<h2 id="8-最后来个传统的自定义方法"><a href="#8-最后来个传统的自定义方法" class="headerlink" title="8. 最后来个传统的自定义方法"></a>8. 最后来个传统的自定义方法</h2><p>在计算器后面加个按钮<code>&lt;button @click=&quot;myfun&quot;&gt;我的按钮&lt;/button&gt;</code><br>再加个方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">export default &#123;</div><div class="line">  name: &apos;hello&apos;,</div><div class="line">  data () &#123;</div><div class="line">    return &#123;</div><div class="line">      a:null,b:null</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  methods:&#123;</div><div class="line">    myfun:function()&#123;</div><div class="line">      document.getElementsByClassName(&apos;hello&apos;)[0].style.color=&quot;#e74c3c&quot;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>node.js环境，npm命令，Vue文件结构，热重载环境，数据绑定，模板语法，属性，事件，方法</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板，祝老板约炮成功！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://share-quincy.oss-cn-shanghai.aliyuncs.com/image/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://share-quincy.oss-cn-shanghai.aliyuncs.com/image/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">-Vue</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://quincyx.github.io/2017/03/28/Vue/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/03/09/bomb后端云/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">bomb后端云</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-    
+
 
 
           </div>
@@ -253,9 +390,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
