@@ -1,4 +1,4 @@
-import { Application, Container } from 'pixi.js'
+import { Application } from 'pixi.js'
 
 export let app: Application
 
