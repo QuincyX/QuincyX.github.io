@@ -6,6 +6,7 @@ export function initApp() {
   app = new Application({
     background: '#2f3542',
     resizeTo: window,
+    antialias: true,
   })
   // @ts-ignore
   globalThis.__PIXI_APP__ = app

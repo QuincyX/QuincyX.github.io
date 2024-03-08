@@ -2,49 +2,55 @@ import { Text, Container, EventMode, Graphics, Sprite, Texture } from 'pixi.js'
 import { nanoid } from 'nanoid'
 import { addTicker, pauseTickerById, restartTickerById } from './ticker'
 import { app } from './common'
+import { createBoxContainer } from './util'
 
+// 富强、民主、文明、和谐，自由、平等、公正、法治，爱国、敬业、诚信、友善
 const danmuList = [
-  { text: 'aa' },
-  { text: 'asdfa' },
-  { text: 'dfasdf' },
-  { text: 'cszdxczx' },
-  { text: 'awedsasdasd' },
-  { text: 'szdxfsdafsdfsdf' },
-  { text: 'aa' },
-  { text: 'asdfa' },
-  { text: 'dfasdf' },
-  { text: 'cszdxczx' },
-  { text: 'awedsasdasd' },
-  { text: 'szdxfsdafsdfsdf' },
-  { text: 'aa' },
-  { text: 'asdfa' },
-  { text: 'dfasdf' },
-  { text: 'cszdxczx' },
-  { text: 'awedsasdasd' },
-  { text: 'szdxfsdafsdfsdf' },
-  { text: 'aa' },
-  { text: 'asdfa' },
-  { text: 'dfasdf' },
-  { text: 'cszdxczx' },
-  { text: 'awedsasdasd' },
-  { text: 'szdxfsdafsdfsdf' },
+  { text: '富强' },
+  { text: '民主' },
+  { text: '文明' },
+  { text: '和谐' },
+  { text: '自由' },
+  { text: '平等' },
+  { text: '公正' },
+  { text: '法治' },
+  { text: '爱国' },
+  { text: '敬业' },
+  { text: '诚信' },
+  { text: '友善' },
+  { text: '富强' },
+  { text: '民主' },
+  { text: '文明' },
+  { text: '和谐' },
+  { text: '自由' },
+  { text: '平等' },
+  { text: '公正' },
+  { text: '法治' },
+  { text: '爱国' },
+  { text: '敬业' },
+  { text: '诚信' },
+  { text: '友善' },
+  { text: '富强' },
+  { text: '民主' },
+  { text: '文明' },
+  { text: '和谐' },
+  { text: '自由' },
+  { text: '平等' },
+  { text: '公正' },
+  { text: '法治' },
+  { text: '爱国' },
+  { text: '敬业' },
+  { text: '诚信' },
+  { text: '友善' },
 ]
 
-const localContainer = new Container()
+let localContainer: BoxContainer
 
 export function initDanmu() {
+  localContainer = createBoxContainer(app.renderer.width, MAX_Y)
   localContainer.x = 0
   localContainer.y = MIN_Y
-  const mask = new Sprite(Texture.WHITE)
-  mask.width = app.renderer.width
-  mask.height = MAX_Y
-  localContainer.addChild(mask)
-  localContainer.mask = mask
-  const background = new Graphics()
-    .beginFill('rgba(0,0,0,0.2)')
-    .drawRect(0, 0, app.renderer.width, MAX_Y)
-    .endFill()
-  localContainer.addChild(background)
+  localContainer.fillBackgroundColor('rgba(0,0,0,0.2)')
   app.stage.addChild(localContainer)
   danmuList.forEach((item) => {
     const danmuItem = new DanmuItem(item.text)
@@ -60,21 +66,35 @@ class DanmuItem extends Container {
   size = 10
   cursor = 'pointer'
   eventMode: EventMode = 'static'
+  isShining = false
   constructor(text: string | number) {
     super()
     this.id = nanoid()
     const textChild = new Text(text)
     textChild.name = 'text'
+    textChild.style.fontWeight = 'bold'
     this.addChild(textChild)
     this.init()
-    addTicker({ id: this.id, cb: this.fly.bind(this) })
+    addTicker({
+      id: this.id,
+      exec: this.fly.bind(this),
+    })
+    addTicker({
+      id: this.id,
+      type: 'sin',
+      speed: 8,
+      exec: this.shining.bind(this),
+    })
     this.on('pointerover', () => {
-      textChild.style.fontWeight = 'bold'
+      textChild.style.fontWeight = 'normal'
       pauseTickerById(this.id)
+      this.isShining = true
     })
     this.on('pointerout', () => {
-      textChild.style.fontWeight = 'normal'
+      textChild.style.fontWeight = 'bold'
       restartTickerById(this.id)
+      textChild.alpha = 1
+      this.isShining = false
     })
   }
   init() {
@@ -96,6 +116,13 @@ class DanmuItem extends Container {
     this.x -= this.speed
     if (this.x < -this.width) {
       this.init()
+    }
+  }
+  shining(sin: number) {
+    if (!this.isShining) return
+    const textChild = this.getChildByName('text')
+    if (textChild) {
+      textChild.alpha = sin
     }
   }
 }

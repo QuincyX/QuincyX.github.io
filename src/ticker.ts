@@ -1,19 +1,40 @@
 import { app } from './common'
 
+let tickerCount = 0
 let tickList: any[] = []
 
 export function initTicker() {
   app.ticker.add(() => {
+    tickerCount++
     tickList.forEach((item) => {
+      if (!item) return
       if (item.paused) return
-      item?.cb()
+      if (item.type === 'sin') {
+        item.exec(Math.abs(Math.sin(tickerCount / item.speed)))
+      } else if (item.type === 'count') {
+        item.exec(tickerCount)
+      } else {
+        item.exec()
+      }
     })
   })
 }
 
-export function addTicker({ id, cb, category }: { id: string; cb: Function; category?: string }) {
-  if (!tickList.find((item) => item.id === id)) {
-    tickList.push({ id, cb, category })
+export function addTicker({
+  id,
+  exec,
+  category,
+  type,
+  speed = 100,
+}: {
+  id: string
+  exec: (a?: any) => void
+  category?: string
+  type?: string
+  speed?: number
+}) {
+  if (!tickList.find((item) => item.id === id && item.type === type && item.speed === speed)) {
+    tickList.push({ id, exec, category, type, speed })
   }
 }
 
