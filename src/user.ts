@@ -1,11 +1,8 @@
-import { Text, Container, EventMode, Graphics, Sprite, Texture } from 'pixi.js'
-import { addTicker, pauseTickerById, restartTickerById } from './ticker'
+import { addTicker } from './ticker'
 import { app } from './common'
 import { createBoxContainer } from './util'
 
 let localContainer: BoxContainer
-const MIN_SIZE = 30
-const MAX_SIZE = 50
 let targetPosition = {
   x: 0,
   y: 0,

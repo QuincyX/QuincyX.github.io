@@ -1,4 +1,4 @@
-import { Text, Container, EventMode, Graphics, Sprite, Texture } from 'pixi.js'
+import { Text, Container, EventMode } from 'pixi.js'
 import { nanoid } from 'nanoid'
 import { addTicker, pauseTickerById, restartTickerById } from './ticker'
 import { app } from './common'
