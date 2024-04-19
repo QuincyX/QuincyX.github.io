@@ -42,6 +42,22 @@ const danmuList = [
   { text: '敬业' },
   { text: '诚信' },
   { text: '友善' },
+  {
+    text: 'BuildSearchRequest',
+    url: 'https://gist.github.com/QuincyX/e5affe5c071d416935bf81be1f10a2ab',
+  },
+  {
+    text: 'ArticleHandler GetList',
+    url: 'https://gist.github.com/QuincyX/aafb06d3913dee4efc85d7a23f2d99a0',
+  },
+  {
+    text: 'Bot Client',
+    url: 'https://gist.github.com/QuincyX/d1d81977b98cf737b373342262ff6772',
+  },
+  {
+    text: 'colorPickerQ',
+    url: 'https://github.com/QuincyX/color-picker-q',
+  },
 ]
 
 let localContainer: BoxContainer
@@ -53,7 +69,7 @@ export function initDanmu() {
   localContainer.fillBackgroundColor('rgba(0,0,0,0.2)')
   app.stage.addChild(localContainer)
   danmuList.forEach((item) => {
-    const danmuItem = new DanmuItem(item.text)
+    const danmuItem = new DanmuItem(item.text, item.url)
     localContainer.addChild(danmuItem)
   })
 }
@@ -62,14 +78,16 @@ export function clearAllDanmu() {}
 
 class DanmuItem extends Container {
   id: string
+  url?: string
   speed = 0
   size = 10
   cursor = 'pointer'
   eventMode: EventMode = 'static'
   isShining = false
-  constructor(text: string | number) {
+  constructor(text: string | number, url?: string) {
     super()
     this.id = nanoid()
+    this.url = url
     const textChild = new Text(text)
     textChild.name = 'text'
     textChild.style.fontWeight = 'bold'
@@ -95,6 +113,9 @@ class DanmuItem extends Container {
       restartTickerById(this.id)
       textChild.alpha = 1
       this.isShining = false
+    })
+    this.on('pointerdown', () => {
+      if (this.url) window.open(this.url, '_blank')
     })
   }
   init() {
